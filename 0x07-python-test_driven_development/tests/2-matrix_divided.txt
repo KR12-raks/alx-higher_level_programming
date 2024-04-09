@@ -1,0 +1,18 @@
+import unittest
+import doctest
+import my_module
+
+class TestMyModuleDocumentation(unittest.TestCase):
+    def test_module_docstring(self):
+        self.assertIsNotNone(my_module.__doc__)
+
+    def test_function_docstrings(self):
+        self.assertIsNotNone(my_module.matrix_divided.__doc__)
+
+def load_tests(loader, tests, ignore):
+    tests.addTests(doctest.DocTestSuite(my_module))
+    return tests
+
+if __name__ == '__main__':
+    unittest.main()
+
