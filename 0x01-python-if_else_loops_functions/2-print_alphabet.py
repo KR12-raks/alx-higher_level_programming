@@ -1,6 +1,4 @@
 #!/usr/bin/python3
 
-if True:
-    print("abcdefghijklmnopqrstuvwxyz")
-else:
-    pass
+for i in range(97, 123):
+    print("{}".format(chr(i)), end='')
